@@ -6,7 +6,7 @@ interface NavbarProps {
   timezone: number
 }
 const Navbar:React.FC<NavbarProps> = ({changeWeather, timezone}) => {
-  const [city, setCity] = useState<string>('Чирчик')
+  const [city, setCity] = useState<string>('Fergana')
   const isMounted = useRef<boolean>(false)
   useEffect(() => {
     if(isMounted.current && city){
