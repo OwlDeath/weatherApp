@@ -1,0 +1,153 @@
+.header {
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 20px 0 30px;
+        @media (max-width: 620px) {
+            flex-direction: column;
+        }
+        div{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            @media (max-width: 620px) {
+                width: 100%;
+                margin-top: 30px;
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+        input {
+            background: rgba(71, 147, 255, 0.2);
+            width: 194px;
+            border-radius: 10px;
+            padding: 9px 20px;
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--color);
+            @media (max-width: 620px) {
+                width:100%;
+            }
+            &::placeholder {
+                color: var(--color);
+            }
+        }
+    }
+
+    &__content {
+        display: flex;
+        justify-content: center;
+        gap: 50px;
+        align-items: center;
+        @media (max-width:992px) {
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+        &-left {
+            box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+            border-radius: 20px;
+            max-width: 400px;
+            width: 100%;
+            padding: 20px;
+            position: relative;
+            height: 311px;
+            @media (max-width:992px) {
+                max-width: 100%;
+            }
+            h1 {
+                color: #4793FF;
+                font-weight: 500;
+                font-size: 96px;
+            }
+
+            h2 {
+                color: var(--color);
+                font-size: 40px;
+                margin-bottom: 31px;
+            }
+
+            p {
+                font-size: 25px;
+                color: #939CB0;
+                margin-bottom: 14px;
+
+                &:last-of-type {
+                    margin-bottom: 0;
+                }
+            }
+
+            div {
+                width: 120px;
+                height: 120px;
+                position: absolute;
+                top: 46px;
+                right: 40px;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    transform: scale(2);
+                }
+            }
+
+        }
+
+        &-right {
+            max-width: 750px;
+            width: 100%;
+            height: 311px;
+            box-shadow: 2px 5px 25px -3px rgba(180, 180, 180, 0.25);
+            border-radius: 20px;
+            padding: 42px 32px;
+            background: url(../../assets/images/cloud.png) right top no-repeat;
+            @media (max-width:992px) {
+                max-width: 100%;
+            }
+           
+            &-list {
+                display: flex;
+                flex-direction: column;
+                row-gap: 22px;
+               
+                li {
+                    display: flex;
+                    column-gap: 20px;
+                    align-items: center;
+                    @media (max-width:530px) {
+                        column-gap: 10px;
+                    }
+                    h3 {
+                        width: 96px;
+                        font-size: 14px;
+                        color: #939CB0;
+                        @media (max-width:530px) {
+                            display: none;
+                            visibility: hidden;
+                        }
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: var(--color);
+                        @media (max-width:530px) {
+                            font-size: 12px;
+                        }
+                    }
+
+                    div {
+                        width: 38px;
+                        height: 38px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        border-radius: 100%;
+                        box-shadow: 1px 4px 10px -1px rgba(71, 147, 255, 0.2);
+                    }
+                }
+            }
+        }
+    }
+}
